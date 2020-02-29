@@ -65,6 +65,7 @@ export default {
           if (res.body.status === 0) {
             this.lunbotuList = res.body.message;
           } else {
+           Toast('读取轮播图错误')
           }
         });
     }
