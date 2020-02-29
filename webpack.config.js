@@ -27,7 +27,15 @@ module.exports = {
             },
             {
                 test: /\.(jpg|png|gif|bmp|jpeg)$/,
-                use: 'url-loader?limit=71655'
+                use: [
+                    {
+                        loader: 'url-loader?limit=71655',
+                        options:{
+                            esModule: false
+                        }
+                    }
+
+                ]
             },
             {
                 test: /\.m?js$/,
