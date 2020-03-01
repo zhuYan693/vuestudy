@@ -35,6 +35,7 @@
 <style lang="less" scoped>
 .app_container {
   padding-top: 40px;
+  padding-bottom: 50px;
   overflow-x:hidden;
 }
 .v-enter {
@@ -49,5 +50,8 @@
 .v-enter-active,
 .v-leave-active {
   transition: all 0.5s ease;
+}
+.mui-active {
+  color:#007aff
 }
 </style>
