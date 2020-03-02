@@ -80,6 +80,7 @@
     background-color: #fff;
 
     li {
+      width: 33%;
       border: 0;
 
       img {

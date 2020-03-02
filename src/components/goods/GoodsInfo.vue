@@ -93,6 +93,14 @@
             //加购物车
             addToShopCar() {
                 this.ballFlag = !this.ballFlag;
+                let goodsinfo = {
+                    id: parseInt(this.id),
+                    count: this.selectedCount,
+                    price: this.goodsinfo.sell_price,
+                    selected: true
+                };
+                this.$store.commit('addToCar',goodsinfo);
+                
             },
             //小球动画
             beforeEnter(el) {
