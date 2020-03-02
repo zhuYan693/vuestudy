@@ -1,10 +1,6 @@
 <template>
   <div>
-    <mt-swipe :auto="10000">
-      <mt-swipe-item v-for="item in lunbotuList" :key="item.index">
-        <img :src="item.img" />
-      </mt-swipe-item>
-    </mt-swipe>
+    <swiper :lunbotuList="lunbotuList" :isfull="true"></swiper>
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <router-link to="/home/NewsList">
@@ -13,16 +9,16 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/photolist">
           <img src="../../images/menu2.png" alt />
           <div class="mui-media-body">图片分享</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/goodslist">
           <img src="../../images/menu3.png" alt />
           <div class="mui-media-body">商品购买</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -48,6 +44,7 @@
 
 <script>
   import { Toast } from "mint-ui";
+  import swiper from '../subcomponents/swiper.vue'
   export default {
     data() {
       return {
@@ -69,19 +66,15 @@
             }
           });
       }
+    },
+    components:{
+      swiper
     }
   };
 </script>
 
 <style lang="less" scoped>
-  .mint-swipe {
-    height: 200px;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+ 
 
   .mui-grid-view.mui-grid-9 {
     background-color: #fff;
